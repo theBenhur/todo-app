@@ -1,0 +1,145 @@
+.todo {
+  width: 100%;
+  height: 100%;
+  background-color: #191919;
+  margin: auto;
+  border-radius: 1rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.todo > button {
+  border-radius: 50%;
+  border: 1px solid transparent;
+  /* padding: 0.6em 1.2em; */
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5em;
+  font-weight: 700;
+  font-family: inherit;
+  background-color: #6a6fcb;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.todo .promtp-wrapper {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(56, 56, 56, 0.5);
+  display: flex;
+  padding: 1rem;
+  display: none;
+}
+
+.promtp {
+  border: 1px solid #fefefe;
+  height: auto;
+  margin-top: auto;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgb(56, 56, 56);
+  z-index: 3;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  box-shadow: 5px 5px 5px #5c5a5a;
+}
+
+.promtp-wrapper.show {
+  display: flex;
+}
+
+textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  resize: none;
+  border-radius: 0.5rem;
+}
+.promtp button {
+  position: relative;
+  /* padding: 1rem; */
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  width: auto;
+  height: auto;
+  background-color: #6a6fcb;
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promtp button[disabled] {
+  background-color: #5c5a5a;
+  color: #b6b1b1;
+}
+.promtp button[disabled]:hover {
+  outline: none;
+}
+.list {
+  padding: 1rem;
+  list-style: none;
+}
+.item {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem 0;
+  align-items: center;
+}
+.item.done {
+  color: #5c5a5a;
+}
+.item label {
+  height: 100%;
+  font-size: 1.2rem;
+  position: relative;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+.pending label {
+  cursor: pointer;
+}
+.item span {
+  position: absolute;
+  border: 1px solid #5c5a5a;
+  width: 100%;
+  left: 0;
+  top: 0.9rem;
+}
+.delete {
+  background-color: rgb(243, 52, 52);
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.todo input[type="checkbox"] {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+.lists-wrapper {
+  max-height: 80%;
+  overflow-y: auto;
+}
+@media screen and (max-width: 426px) {
+  .todo {
+    border-radius: 0;
+  }
+}
